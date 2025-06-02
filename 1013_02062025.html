@@ -130,9 +130,9 @@
                     font-size: 12px;
                     line-height: 18px;
                 }
-               .grayscale-tile {{
+               .grayscale-tile {
                 filter: grayscale(100%);
-                }}
+                }
             </style>
               <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
         </head>
@@ -151,11 +151,11 @@
         }).setView(initialCoordinates, initialZoomLevel);
 
 
-            const grayscaleOSM = L.tileLayer('https://{{s}}.tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
+            const grayscaleOSM = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: '&copy; OpenStreetMap contributors',
                     maxZoom: 19,
                     className: 'grayscale-tile'
-                }}).addTo(map);;
+                }).addTo(map);;
 
             L.control.zoom({
                 position: 'topleft'
